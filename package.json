@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts":{
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
     "express": "^4.16.3"

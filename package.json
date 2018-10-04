@@ -1,0 +1,14 @@
+{
+  "name": "d3rby",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "mikaeledgren",
+  "license": "MIT",
+  "private": true,
+  "scripts":{
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

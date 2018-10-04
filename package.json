@@ -5,7 +5,7 @@
   "author": "mikaeledgren",
   "license": "MIT",
   "private": true,
-  "scripts":{
+  "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd web && yarn && yarn run build"
   },
@@ -13,6 +13,7 @@
     "node": "10.11.x"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "simple-oauth2": "^2.2.1"
   }
 }

@@ -5,9 +5,32 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'web/build')));
 
-app.get('/api/shl/token', (req, res) => {
-  res.json({'nisse': 'hej'});
-  console.log(`responded!`);
+app.get('/api/shl/token', async (req, res) => {
+
+  try {
+
+    const credentials = {
+      client: {
+        id: 'process.env.SHL_OPEN_API_ID',
+        secret: 'process.env.SHL_OPEN_API_SECRET'
+      },
+      auth: {
+        tokenHost: 'https://openapi.shl.se/oauth2/token'
+      }
+    };
+
+    const oauth2 = require('simple-oauth2').create(credentials);
+    const result = await oauth2.clientCredentials.getToken();
+    const accessToken = oauth2.accessToken.create(result);
+    console.log(accessToken);
+
+    return res.status(200).json(accessToken);
+
+  } catch (error) {
+
+    console.error('Access Token error', error.message);
+    res.status(401).send();
+  }
 });
 
 app.get('*', (req, res) => {

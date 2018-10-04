@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
 
-  state = {persons: {}};
+  state = {shlToken: null};
 
   componentDidMount(){
     this.getShlToken();
@@ -13,19 +13,23 @@ class App extends Component {
   getShlToken = async () => {
     let response = await fetch('/api/shl/token');
     response = await response.json();
-    this.setState({persons: response});
+    this.setState({shlToken: response.token});
+    console.log(response, response.token);
+    const headers = {'Authorization': `Bearer ${response.token.access_token}`};
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    fetch(proxyurl + 'https://openapi.shl.se/seasons/2018/games', {headers,})
   };
 
   render() {
 
-    const persons = this.state.persons;
-    console.log(persons);
+    const token = this.state.token;
+    console.log(token);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <p>
-            {persons ? persons.nisse : 'nej'}
+
           </p>
           <a
             className="App-link"

@@ -9,6 +9,9 @@
     "start": "node index.js",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
+  "engines": {
+    "node": "10.11.x"
+  },
   "dependencies": {
     "express": "^4.16.3"
   }

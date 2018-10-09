@@ -1,23 +1,23 @@
 import LogHelper from '../utils/LogHelper';
 import teamStore from './Team.store';
 
+/*eslint-disable*/
 const {logName, debug, log, error} = LogHelper.get('TeamService', LogHelper.SERVICE_TYPE);
+/*eslint-enable*/
 
 class TeamService {
 
-  getAll = async () => {
+  load = async () => {
     try {
 
       debug(...logName, 'Getting the teams from api...');
 
       const response = await fetch('/api/shl/teams');
-      const teams = response.data;
+      const teams = await response.json();
 
-      debug(...logName, '...teams returned', teams);
+      debug(...logName, '...got teams!');
 
-      teamStore.setTeams(teams);
-
-      return teams;
+      teamStore.teams = teams;
 
     } catch (e) {
       error(...logName, e);

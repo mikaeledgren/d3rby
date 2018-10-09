@@ -9,10 +9,10 @@ routes.get('/teams', async (req, res) => {
 
     logger.debug('Received request to get teams...');
 
-    const teams = await service.getAll;
+    const teams = await service.getAll();
 
-    res.status(200).json(teams);
     logger.debug('...request complete!');
+    res.status(200).json(teams);
 
   } catch (error) {
     logger.error('Access Token error', error.message);

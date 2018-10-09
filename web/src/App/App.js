@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 import './App.css';
-import Games from "../Game/Game-list";
+import GameList from "../Game/Game-list";
 import {observer} from 'mobx-react';
+import Table from "../Table/Table";
+import teamService from '../Team/Team.service';
 
 class App extends Component {
+
+  componentDidMount(){
+    teamService.load();
+  }
 
   render() {
 
@@ -13,7 +19,8 @@ class App extends Component {
           DERBYLIGAN
         </header>
         <div className="page">
-          <Games/>
+          <Table/>
+          <GameList/>
         </div>
       </div>
     );

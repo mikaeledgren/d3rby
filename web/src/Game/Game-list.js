@@ -5,12 +5,14 @@ import gameStore from './Game.store';
 import gameService from './Game.service';
 import './Game.css';
 
-const {logName, debug, log, warn} = LogHelper.get('Games', LogHelper.COMPONENT_TYPE);
+/*eslint-disable*/
+const {logName, debug, log, warn} = LogHelper.get('Game-list', LogHelper.COMPONENT_TYPE);
+/*eslint-enable*/
 
-class Games extends Component {
+class GameList extends Component {
 
   componentDidMount() {
-    gameService.getAll();
+    gameService.load();
   }
 
   render() {
@@ -32,6 +34,5 @@ class Games extends Component {
 
 }
 
-Games = observer(Games);
-
-export default Games;
+GameList = observer(GameList);
+export default GameList;

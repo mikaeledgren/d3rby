@@ -77,7 +77,7 @@ class GamesService {
       games = this._filter(games);
       games = this._sort(games);
       games = this._asModels(games);
-      const nextGameDate = this.getNextGameDate(games);
+      const nextGameDate = this._getNextGameDate(games);
 
       gameStore.games = games;
       gameStore.lastFetch = new Date();
@@ -169,7 +169,7 @@ class GamesService {
    *
    * @param games
    */
-  getNextGameDate(games) {
+  _getNextGameDate(games) {
     try {
 
       logger.debug('Getting next game\'s date...');

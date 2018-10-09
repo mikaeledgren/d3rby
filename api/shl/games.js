@@ -14,6 +14,7 @@ routes.get('/games', async (req, res) => {
 
     logger.debug('...request complete!');
     res.status(200).json(games);
+
   } catch (error) {
     logger.error('Access Token error', error.message);
     res.status(401).send();

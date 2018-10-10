@@ -18,6 +18,7 @@ class Table extends Component {
         <div className="table">
           <div className="row header">
             <div className="col header">Lag</div>
+            <div className="col header">Spelade matcher</div>
             <div className="col header">Gjorda mål</div>
             <div className="col header">Insläppta mål</div>
             <div className="col header">Målskillnad</div>
@@ -26,11 +27,12 @@ class Table extends Component {
           {tableStore.table.map((entry, i) => {
             return (
               <div className="row" key={i}>
-                <div className="col">{entry.team.name}</div>
+                <div className="col team-name">{entry.team.name}</div>
+                <div className="col">{entry.gamesPlayed}</div>
                 <div className="col">{entry.goalsScored}</div>
                 <div className="col">{entry.goalsAgainst}</div>
                 <div className="col">{entry.goalDifference}</div>
-                <div className="col">{entry.points}</div>
+                <div className="col points">{entry.points}</div>
               </div>
             )
           })}

@@ -27,6 +27,7 @@ class TableService {
 
     const tableEntry = {
       team: team,
+      gamesPlayed: 0,
       goalsScored: 0,
       goalsAgainst: 0,
       goalDifference: 0,
@@ -44,6 +45,7 @@ class TableService {
       tableEntry.points += points;
       tableEntry.goalsScored += teamScore > opponentScore && game.penaltyShots ? teamScore - 1 : teamScore;
       tableEntry.goalsAgainst += teamScore < opponentScore && game.penaltyShots ? opponentScore - 1 : opponentScore;
+      tableEntry.gamesPlayed += 1;
 
       debug(...logName, '--------');
       debug(...logName, `[${team.name}] team score is ${teamScore}, oppos score is ${opponentScore} ${game.penaltyShots ? '(on penalties)' : ''} ${game.overtime ? '(on overtime)' : ''}`);

@@ -28,7 +28,5 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "postcss-loader": "^3.0.0",
-    "react-app-rewire-postcss": "^3.0.0"
   }
 }

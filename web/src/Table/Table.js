@@ -3,6 +3,7 @@ import {observer} from 'mobx-react';
 import './Table.css';
 import tableStore from './Table.store';
 import LogHelper from '../utils/LogHelper';
+import ReactTooltip from 'react-tooltip';
 
 /*eslint-disable*/
 const {logName, log, error} = LogHelper.get('Table', LogHelper.COMPONENT_TYPE);
@@ -16,13 +17,19 @@ class Table extends Component {
       <div className="table-container">
         <h2>TABLE</h2>
         <div className="table">
-          <div className="row header">
-            <div className="col header">Lag</div>
-            <div className="col header">Spelade matcher</div>
-            <div className="col header">Gjorda mål</div>
-            <div className="col header">Insläppta mål</div>
-            <div className="col header">Målskillnad</div>
-            <div className="col header">Poäng</div>
+          <div className="row row-header">
+            <div className="col col-header team-name"><div>Lag</div></div>
+            <div className="col col-header"><div>Spelade matcher</div></div>
+            <div className="col col-header"><div>Gjorda mål</div></div>
+            <div className="col col-header"><div>Insläppta mål</div></div>
+            <div className="col col-header"><div>Målskillnad</div></div>
+            <div className="col col-header"><div>Poäng</div></div>
+            <ReactTooltip id="team-name"
+                          effect="solid"
+            >
+              <span>Lag</span>
+            </ReactTooltip>
+
           </div>
           {tableStore.table.map((entry, i) => {
             return (

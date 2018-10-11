@@ -1,21 +1,27 @@
+
+
 .table-container {
-  width: 100%;
+
+  display:-webkit-box;
+
+  display:flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
-  .table-container .table {
+.table-container .table {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    border: 1px solid #eee;
+    margin: 2rem;
   }
 
-  .table-container .table .row {
+.table-container .table .row {
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: horizontal;
@@ -26,12 +32,40 @@
       -webkit-box-pack: justify;
               justify-content: space-between;
       width: 100%;
-      color: green;
     }
 
-  .table-container .table .row .col {
-        margin: 1em;
+.table-container .table .row .col {
+        padding: 0.2em;
+        width: 70px;
+        margin: 0;
       }
+
+.table-container .table .row .col.col-header {
+          padding: 0;
+          font-size: 12px;
+          text-transform: uppercase;
+          display:-webkit-box;
+          display:flex;
+          -webkit-box-align: end;
+                  align-items: flex-end;
+          -webkit-box-pack: end;
+                  justify-content: flex-end;
+
+        }
+
+.table-container .table .row .col.col-header >div{
+            -webkit-transform: rotateZ(-45deg);
+                    transform: rotateZ(-45deg);
+            -webkit-transform-origin: 10% 0;
+                    transform-origin: 10% 0;
+            width: 80px;
+            height: 2rem;
+            margin: auto auto 0;
+          }
+
+.table-container .table .row .col.team-name {
+          width: 150px;
+        }
 
 
 

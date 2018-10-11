@@ -1,12 +1,15 @@
+@import '../variables.pcss';
+
 .table-container {
-  width: 100%;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 
   .table {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid #eee;
+    margin: 2rem;
 
     .row {
       display: flex;
@@ -14,10 +17,32 @@
       align-items: flex-start;
       justify-content: space-between;
       width: 100%;
-      color: green;
 
       .col {
-        margin: 1em;
+        padding: 0.2em;
+        width: 70px;
+        margin: 0;
+        
+        &.col-header {
+          padding: 0;
+          font-size: 12px;
+          text-transform: uppercase;
+          display:flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          >div{
+            transform: rotateZ(-45deg);
+            transform-origin: 10% 0;
+            width: 80px;
+            height: 2rem;
+            margin: auto auto 0;
+          }
+
+        }
+
+        &.team-name {
+          width: 150px;
+        }
       }
     }
   }

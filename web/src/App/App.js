@@ -14,14 +14,17 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
-        <header className="App-header">
-          DERBYLIGAN
+      <div className="page">
+
+        <header className="page-header">
+          <h1>Derbyligan</h1>
         </header>
-        <div className="page">
+
+        <div className="page-content">
           <Table/>
           <GameList/>
         </div>
+
       </div>
     );
   }

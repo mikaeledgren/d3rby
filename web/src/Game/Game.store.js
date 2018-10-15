@@ -17,6 +17,10 @@ class GameStore {
   get playedGames(){
     return this.games.filter(game => game.played);
   }
+
+  get nextGame(){
+    return this.games.filter(game => !game.played)[0];
+  }
 }
 
 decorate(GameStore, {

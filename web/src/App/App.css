@@ -6,9 +6,15 @@
           flex-direction: column;
   -webkit-box-align: center;
           align-items: center;
+  width: 100%;
+
+//  background: rgb(121,9,69);
+//  background: linear-gradient(0deg, rgba(121,9,69,1) 0%, rgba(13,0,36,1) 100%);
+
+  color: #220113;
 }
 
-  .page .page-header {
+.page .page-header {
     background-color: #282c34;
     min-height: 20vh;
     display: -webkit-box;
@@ -21,7 +27,7 @@
     width: 100%;
   }
 
-  .page .page-content {
+.page .page-content {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;

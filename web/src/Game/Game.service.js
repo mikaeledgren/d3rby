@@ -15,7 +15,7 @@ class GameService {
       const response = await fetch('/api/shl/games');
       let games = await response.json();
 
-      debug(...logName, '...got games!');
+      debug(...logName, '...got games!', games);
 
       gameStore.games = games;
     } catch (e) {

@@ -1,20 +1,113 @@
-.games-container {
-  width: 100%;
-}
-.games {
+.game-container {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
-  border: 1px solid #eee;
+  border: 0px solid #220113;
+  box-shadow: 0 10px 55px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
 }
-.game {
-  display: -webkit-box;
-  display: flex;
-}
-.game>div {
-  margin: 1em;
-}
+
+.game-container div {
+    border: 0px solid red;
+  }
+
+.game-container .date {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 60px;
+    border-right: 0px solid #220113;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
+.game-container .date .day, .game-container .date .month {
+      width: 100%;
+      text-align: center;
+      color: black;
+    }
+
+.game-container .date .day {
+      font-size: 2rem;
+      font-family: "Fugaz One", Bangers, "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    }
+
+.game-container .date .month {
+      margin-top: -10px;
+      height: 1.6rem;
+    }
+
+.game-container .game {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+
+  }
+
+.game-container .game .game-main {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+    }
+
+.game-container .game .game-main .loser {
+        color: #710840;
+      }
+
+.game-container .game .game-main .winner {
+        color: #f0bad6;
+      }
+
+.game-container .game .game-main .team {
+        width: 150px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+      }
+
+.game-container .game .game-main .team.home-team {
+          text-align: right;
+          -webkit-box-pack: end;
+                  justify-content: flex-end;
+        }
+
+.game-container .game .game-main .result {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+      }
+
+.game-container .game .game-main .result div {
+          margin: 0 5px;
+        }
+
+.game-container .game .game-main .result .scores {
+          display: -webkit-box;
+          display: flex;
+        }
+
+.game-container .game .game-main .result .scores .score {
+            width: 30px;
+          }
+
+.game-container .game .game-main .result .scores .score.home-score {
+              text-align: right;
+            }
+
+.game-container .game .game-meta {
+      font-size: 0.7rem;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+              justify-content: center;
+      margin-top: 10px;
+    }

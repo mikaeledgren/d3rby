@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Roboto:400,500|Fugaz+One');
 @import url("https://use.typekit.net/nkq8bfq.css");
 html {
   box-sizing: border-box;
@@ -6,11 +6,21 @@ html {
 html *, html *:before, html *:after {
     box-sizing: inherit;
   }
-html, html body {
+html {
     margin: 0;
     padding: 0;
     font-size: 18px;
     font-family: "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    background: #a10f5d;
+    width: 100%;
+  }
+html body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    background: #a10f5d;
+    width: 100%;
   }
 html code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

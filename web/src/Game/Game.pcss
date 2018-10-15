@@ -1,16 +1,95 @@
-.games-container {
-  width: 100%;
-}
-.games {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #eee;
-}
-.game {
-  display: flex;
-}
+@import '../variables.pcss';
 
-.game>div {
-  margin: 1em;
+.game-container {
+  display: flex;
+  border: 0px solid var(--textColor);
+  box-shadow: 0 10px 55px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+
+  div {
+    border: 0px solid red;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    border-right: 0px solid var(--textColor);
+    padding-left: 10px;
+    padding-top: 5px;
+
+    .day, .month {
+      width: 100%;
+      text-align: center;
+      color: black;
+    }
+
+    .day {
+      font-size: 2rem;
+      font-family: var(--fugazOneFontFamily);
+    }
+    .month {
+      margin-top: -10px;
+      height: 1.6rem;
+    }
+  }
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .game-main {
+      display: flex;
+      justify-content: space-between;
+
+      .loser {
+        color: var(--weakerTextColor);
+      }
+
+      .winner {
+        color: var(--strongerTextColor);
+      }
+
+      .team {
+        width: 150px;
+        display: flex;
+        align-items: center;
+
+        &.home-team {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+
+      .result {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          margin: 0 5px;
+        }
+
+        .scores {
+          display: flex;
+
+          .score {
+            width: 30px;
+
+            &.home-score {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    .game-meta {
+      font-size: 0.7rem;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+  }
 }

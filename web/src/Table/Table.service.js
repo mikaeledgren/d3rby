@@ -10,7 +10,6 @@ const {logName, debug, log, error} = LogHelper.get('TableService', LogHelper.SER
 class TableService {
 
   getTable = (teams, games) => {
-    log(...logName, 'Creating table!', teams, games);
 
     let table = [];
     teamStore.teams.forEach(team => {
@@ -18,7 +17,6 @@ class TableService {
     });
 
     table = _.orderBy(table, ['points', 'goalDifference', 'goalsScored'], ['desc', 'desc', 'desc']);
-    log(...logName, 'Table looks like this:', table);
 
     return table;
   };
@@ -35,7 +33,6 @@ class TableService {
     };
 
     const teamGames = gameService.getTeamGames(team, games);
-    debug(...logName, `--------- ${team.name} ---------`);
 
     teamGames.forEach(game => {
       const teamScore = game.homeTeam.code === team.code ? game.homeScore : game.awayScore;
@@ -47,15 +44,10 @@ class TableService {
       tableEntry.goalsAgainst += teamScore < opponentScore && game.penaltyShots ? opponentScore - 1 : opponentScore;
       tableEntry.gamesPlayed += 1;
 
-      debug(...logName, '--------');
-      debug(...logName, `[${team.name}] team score is ${teamScore}, oppos score is ${opponentScore} ${game.penaltyShots ? '(on penalties)' : ''} ${game.overtime ? '(on overtime)' : ''}`);
-      debug(...logName, `[${team.name}] points are ${points}`);
-      debug(...logName, `[${team.name}] game is`, game);
     });
 
     tableEntry.goalDifference = tableEntry.goalsScored - tableEntry.goalsAgainst;
 
-    debug(...logName, `[${team.name}] table entry: `, tableEntry);
     return tableEntry;
   }
 }

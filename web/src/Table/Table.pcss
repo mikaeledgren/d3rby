@@ -1,15 +1,25 @@
 @import '../variables.pcss';
 
 .table-container {
-
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 768px) {
+    width: 470px;
+    margin-right: 5px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-right: 5px;
+  }
+
   .table {
+    margin: 2rem 0 4rem;
     display: flex;
     flex-direction: column;
-    margin: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
 
     .row {
       display: flex;
@@ -18,30 +28,27 @@
       justify-content: space-between;
       width: 100%;
 
+      div {
+        border: 0px solid red;
+      }
       .col {
         padding: 0.2em;
-        width: 70px;
+        width: 50px;
         margin: 0;
-        
-        &.col-header {
-          padding: 0;
-          font-size: 12px;
-          text-transform: uppercase;
-          display:flex;
-          align-items: flex-end;
-          justify-content: flex-end;
-          >div{
-            transform: rotateZ(-45deg);
-            transform-origin: 10% 0;
-            width: 80px;
-            height: 2rem;
-            margin: auto auto 0;
-          }
+        text-align: center;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
+        &.col-header {
+          font-size: 0.6em;
+          text-transform: uppercase;
         }
 
         &.team-name {
-          width: 150px;
+          width: 200px;
+          justify-content: flex-start;
         }
       }
     }

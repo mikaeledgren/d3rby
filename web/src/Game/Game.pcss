@@ -52,9 +52,17 @@
       }
 
       .team {
-        width: 150px;
         display: flex;
         align-items: center;
+
+        @media (min-width: 768px) {
+          width: 150px;
+        }
+
+        @media (max-width: 767px) {
+          width: 100px;
+        }
+
 
         &.home-team {
           text-align: right;

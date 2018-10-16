@@ -11,20 +11,6 @@
   color: #d673a9;
 }
 
-@media (min-width: 768px) {
-
-.page {
-    width: 470px
-}
-  }
-
-@media (max-width: 767px) {
-
-.page {
-    width: 100%
-}
-  }
-
 .page .page-header {
     background-color: #282c34;
     min-height: 20vh;
@@ -46,6 +32,22 @@
             flex-direction: column;
     -webkit-box-align: center;
             align-items: center;
-    width: 100%;
-    margin: 1em;
+
   }
+
+@media (min-width: 768px) {
+
+.page .page-content {
+      width: 470px
+
+  }
+    }
+
+@media (max-width: 767px) {
+
+.page .page-content {
+      width: 100%;
+      padding: 1rem
+
+  }
+    }

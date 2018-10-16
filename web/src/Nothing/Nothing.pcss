@@ -10,12 +10,20 @@
   padding: 2rem;
 
   .nothing-text {
-    --font-size: 5;
-    font-size: var(--font-size)rem;
     font-family: var(--sofiaProFontFamily);
     font-weight: 700;
     font-style: normal;
-    line-height: calc(var(--font-size)rem + 0.5rem);
     color: var(--strongerTextColor);
+
+    @media (min-width: 668px) {
+      --font-size: 5;
+      font-size: var(--font-size)rem;
+      line-height: calc(var(--font-size)rem + 0.5rem);
+    }
+    @media (max-width: 666px) {
+      --font-size: 3;
+      font-size: var(--font-size)rem;
+      line-height: calc(var(--font-size)rem + 0.4rem);
+    }
   }
 }

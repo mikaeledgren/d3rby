@@ -77,14 +77,14 @@
                 align-items: center;
       }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
 
 .game-container .game .game-main .team {
           width: 150px
       }
         }
 
-@media (max-width: 767px) {
+@media (max-width: 666px) {
 
 .game-container .game .game-main .team {
           width: 100px
@@ -114,14 +114,14 @@
           display: flex;
         }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
 
 .game-container .game .game-main .result .scores .score {
               width: 30px
           }
             }
 
-@media (max-width: 767px) {
+@media (max-width: 666px) {
 
 .game-container .game .game-main .result .scores .score {
               width: 20px

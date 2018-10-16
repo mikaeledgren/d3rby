@@ -1,8 +1,8 @@
 .game-container {
   display: -webkit-box;
   display: flex;
-  border: 0px solid #220113;
-  box-shadow: 0 10px 55px 0 rgba(0, 0, 0, 0.2);
+  border: 0px solid #d673a9;
+  box-shadow: 0 10px 55px 0 rgba(0, 0, 0, 0.6);
   margin: 10px 0;
 }
 
@@ -17,15 +17,21 @@
     -webkit-box-direction: normal;
             flex-direction: column;
     width: 60px;
-    border-right: 0px solid #220113;
+    border-right: 0px solid #d673a9;
     padding-left: 10px;
     padding-top: 5px;
   }
 
-.game-container .date .day, .game-container .date .month {
+.game-container .date .day {
       width: 100%;
       text-align: center;
-      color: black;
+      color: #f5d3e5;
+    }
+
+.game-container .date .month {
+      width: 100%;
+      text-align: center;
+      color: #f5d3e5;
     }
 
 .game-container .date .day {
@@ -34,7 +40,7 @@
     }
 
 .game-container .date .month {
-      margin-top: -10px;
+      margin-top: -15px;
       height: 1.6rem;
     }
 
@@ -57,11 +63,11 @@
     }
 
 .game-container .game .game-main .loser {
-        color: #710840;
+        color: #731547;
       }
 
 .game-container .game .game-main .winner {
-        color: #f0bad6;
+        color: #f5d3e5;
       }
 
 .game-container .game .game-main .team {

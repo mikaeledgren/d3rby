@@ -1,0 +1,39 @@
+@import '../variables.pcss';
+
+.loading-container {
+  position:absolute;
+  min-width: 100%;
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .loading-background {
+    min-width: 100%;
+    min-height: 100vh;
+    top:0;
+    position: absolute;
+    background: #fff;
+    animation: pulse 1s infinite alternate ease-in;
+  }
+
+  .loading-text {
+    --font-size: 5;
+    font-size: var(--font-size)rem;
+    font-family: var(--sofiaProFontFamily);
+    font-weight: 700;
+    font-style: normal;
+    line-height: calc(var(--font-size)rem + 0.5rem);
+    color: var(--strongerTextColor);
+  }
+}
+
+@keyframes pulse {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}

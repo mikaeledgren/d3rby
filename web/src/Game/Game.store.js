@@ -8,6 +8,7 @@ const {logName, debug, log, error} = LogHelper.get('GameStore', LogHelper.STORE_
 class GameStore {
 
   games = [];
+  loading = false;
 
   get isEmpty() {
     debug(this.games.length ? 'There are games in store' : 'There are no games in store');
@@ -25,6 +26,7 @@ class GameStore {
 
 decorate(GameStore, {
   games: observable,
+  loading: observable,
   setGames: action,
   isEmpty: computed,
   playedGames: computed,

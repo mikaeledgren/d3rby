@@ -52,6 +52,7 @@
             flex-direction: column;
     -webkit-box-pack: center;
             justify-content: center;
+    width: 100%;
 
   }
 
@@ -75,21 +76,8 @@
         display: flex;
         -webkit-box-align: center;
                 align-items: center;
+        width: 40%;
       }
-
-@media (min-width: 768px) {
-
-.game-container .game .game-main .team {
-          width: 150px
-      }
-        }
-
-@media (max-width: 767px) {
-
-.game-container .game .game-main .team {
-          width: 100px
-      }
-        }
 
 .game-container .game .game-main .team.home-team {
           text-align: right;
@@ -114,19 +102,9 @@
           display: flex;
         }
 
-@media (min-width: 768px) {
-
 .game-container .game .game-main .result .scores .score {
-              width: 30px
+            width: 20%;
           }
-            }
-
-@media (max-width: 767px) {
-
-.game-container .game .game-main .result .scores .score {
-              width: 20px
-          }
-            }
 
 .game-container .game .game-main .result .scores .score.home-score {
               text-align: right;

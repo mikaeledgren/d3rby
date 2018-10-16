@@ -11,13 +11,16 @@ class GameService {
     try {
       gameStore.loading = true;
 
-      debug(...logName, 'Getting all games from api...');
+      debug(...logName, 'Getting games from the API...');
+
       const response = await fetch('/api/shl/games');
       let games = await response.json();
-      debug(...logName, '...got games!', games);
+
+      debug(...logName, `...got ${games.length} games!`, );
 
       gameStore.games = games;
       gameStore.loading = false;
+
     } catch (e) {
       error(...logName, e);
     }

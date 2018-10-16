@@ -18,7 +18,6 @@ class NextGame extends Component {
   render() {
 
     const game = gameStore.nextGame;
-    log(...logName, game);
 
     return (
       <div className="next-game-container">

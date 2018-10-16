@@ -10,12 +10,12 @@ class TeamService {
   load = async () => {
     try {
 
-      debug(...logName, 'Getting the teams from api...');
+      debug(...logName, 'Getting teams from the API...');
 
       const response = await fetch('/api/shl/teams');
       const teams = await response.json();
 
-      debug(...logName, '...got teams!');
+      debug(...logName, `...got ${teams.length} teams!`);
 
       teamStore.teams = teams;
 

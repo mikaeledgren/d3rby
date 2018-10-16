@@ -34,7 +34,7 @@
 
   }
 
-@media (min-width: 768px) {
+@media (min-width: 501px) {
 
 .page .page-content {
       width: 470px
@@ -42,7 +42,7 @@
   }
     }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
 
 .page .page-content {
       width: 100%;

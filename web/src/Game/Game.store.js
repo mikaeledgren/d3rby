@@ -11,7 +11,7 @@ class GameStore {
   loading = false;
 
   get isEmpty() {
-    debug(this.games.length ? 'There are games in store' : 'There are no games in store');
+    debug(...logName, this.games.length ? `There are ${this.games.length} games in store` : 'There are no games in store');
     return this.games.length === 0;
   };
 

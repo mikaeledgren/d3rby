@@ -6,13 +6,6 @@
   align-items: center;
   width: 100%;
 
-  @media (min-width: 768px) {
-    width: 470px;
-  }
-  @media (max-width: 767px) {
-    width: 100%;
-  }
-
   color: var(--textColor);
 
   .page-header {
@@ -29,7 +22,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    margin: 1em;
+
+    @media (min-width: 768px) {
+      width: 470px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 1rem;
+    }
+
   }
 }

@@ -24,8 +24,11 @@ class Table extends Component {
             <Div className="col col-header" tooltip="Poäng">P&nbsp;</Div>
           </div>
           {tableStore.table.map((entry, i) => {
+
+            const rowClasses = `row ${i === 0 ? 'leader' : ''}`;
+
             return (
-              <div className="row" key={i}>
+              <div className={rowClasses} key={i}>
                 <div className="col team-name">{entry.team.name}</div>
                 <div className="col">{entry.gamesPlayed}</div>
                 <div className="col">{entry.goalsScored}</div>

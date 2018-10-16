@@ -6,8 +6,12 @@
   align-items: center;
   width: 100%;
 
-//  background: rgb(121,9,69);
-//  background: linear-gradient(0deg, rgba(121,9,69,1) 0%, rgba(13,0,36,1) 100%);
+  @media (min-width: 768px) {
+    width: 470px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   color: var(--textColor);
 

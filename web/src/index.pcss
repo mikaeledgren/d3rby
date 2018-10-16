@@ -12,11 +12,25 @@ html {
   &, body {
     margin: 0;
     padding: 0;
-    font-size: 18px;
     font-family: var(--sofiaProFontFamily);
     font-weight: 400;
     font-style: normal;
-    background: var(--bgColor);
+    background: rgb(121,9,69);
+    background: linear-gradient(0deg, rgba(121,9,69,1) 0%, rgba(13,0,36,1) 100%);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  #root{
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 

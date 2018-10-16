@@ -8,11 +8,22 @@
           align-items: center;
   width: 100%;
 
-//  background: rgb(121,9,69);
-//  background: linear-gradient(0deg, rgba(121,9,69,1) 0%, rgba(13,0,36,1) 100%);
-
-  color: #220113;
+  color: #d673a9;
 }
+
+@media (min-width: 768px) {
+
+.page {
+    width: 470px
+}
+  }
+
+@media (max-width: 767px) {
+
+.page {
+    width: 100%
+}
+  }
 
 .page .page-header {
     background-color: #282c34;

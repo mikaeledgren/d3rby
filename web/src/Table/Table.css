@@ -20,7 +20,7 @@
 
 .table-container {
     width: 100%;
-    margin-right: 5px
+    margin: 0 50px
 }
   }
 
@@ -47,6 +47,10 @@
               justify-content: space-between;
       width: 100%;
     }
+
+.table-container .table .row.leader {
+        color: #f5d3e5;
+      }
 
 .table-container .table .row div {
         border: 0px solid red;

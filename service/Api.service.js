@@ -105,10 +105,13 @@ class AuthService {
     try {
 
       logger.debug('Getting token...');
+      logger.trace('.......');
+      logger.trace('env params:', process.env);
+      logger.trace('.......');
       const credentials = {
         client: {
-          id: '1bf21586737f53787c38711602902c1a',
-          secret: 'd7242010ae5583456d335b0b3f2c19c564ffb76bc26ab068301e170bd8d48ff4'
+          id: process.env.SHL_OPEN_API_ID,
+          secret: process.env.SHL_OPEN_API_SECRET
         },
         auth: {
           tokenHost: BASE_PATH + '/oauth2/token'

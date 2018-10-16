@@ -30,7 +30,7 @@
 
 .game-container .date .day {
       font-size: 2rem;
-      font-family: "Fugaz One", Bangers, "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+      font-family: "Fugaz One", sofia-pro, Roboto, "Helvetica Neue", sans-serif;
     }
 
 .game-container .date .month {

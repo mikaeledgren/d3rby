@@ -10,7 +10,9 @@ html {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    font-family: sofia-pro, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background: #a10f5d;
     width: 100%;
   }
@@ -18,7 +20,9 @@ html body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    font-family: sofia-pro, Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background: #a10f5d;
     width: 100%;
   }
@@ -27,7 +31,9 @@ html code {
     monospace;
   }
 html h1 {
-    font-family: Bangers, "Sofia Pro", "Roboto", "Helvetica Neue", sans-serif;
+    font-family: undefined;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 2px;
     font-size: 3em;
   }

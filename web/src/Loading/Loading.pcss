@@ -14,7 +14,7 @@
     min-height: 100vh;
     top:0;
     position: absolute;
-    background: #fff;
+    background: #000;
     animation: pulse 1s infinite alternate ease-in;
   }
 
@@ -23,6 +23,7 @@
     font-weight: 700;
     font-style: normal;
     color: var(--strongerTextColor);
+    z-index: 2;
 
     @media (min-width: 501px) {
       --font-size: 5;
@@ -42,6 +43,6 @@
     opacity: 0;
   }
   100%{
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }

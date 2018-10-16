@@ -87,7 +87,7 @@
 @media (max-width: 767px) {
 
 .game-container .game .game-main .team {
-          width: 100px
+          width: 120px
       }
         }
 
@@ -114,9 +114,19 @@
           display: flex;
         }
 
+@media (min-width: 768px) {
+
 .game-container .game .game-main .result .scores .score {
-            width: 30px;
+              width: 30px
           }
+            }
+
+@media (max-width: 767px) {
+
+.game-container .game .game-main .result .scores .score {
+              width: 20px
+          }
+            }
 
 .game-container .game .game-main .result .scores .score.home-score {
               text-align: right;

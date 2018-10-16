@@ -60,7 +60,7 @@
         }
 
         @media (max-width: 767px) {
-          width: 100px;
+          width: 120px;
         }
 
 
@@ -82,7 +82,13 @@
           display: flex;
 
           .score {
-            width: 30px;
+            @media (min-width: 768px) {
+              width: 30px;
+            }
+
+            @media (max-width: 767px) {
+              width: 20px;
+            }
 
             &.home-score {
               text-align: right;

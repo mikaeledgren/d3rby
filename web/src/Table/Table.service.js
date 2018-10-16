@@ -1,6 +1,8 @@
 import teamStore from '../Team/Team.store';
-import LogHelper from '../utils/LogHelper';
 import gameService from '../Game/Game.service';
+import gameStore from '../Game/Game.store';
+import tableStore from './Table.store';
+import LogHelper from '../utils/LogHelper';
 import _ from 'lodash';
 
 /*eslint-disable*/
@@ -9,16 +11,18 @@ const {logName, debug, log, error} = LogHelper.get('TableService', LogHelper.SER
 
 class TableService {
 
-  getTable = (teams, games) => {
+  create = () => {
 
     let table = [];
+    const games = gameStore.games;
+
     teamStore.teams.forEach(team => {
       table.push(this._createTableEntry(team, games));
     });
 
     table = _.orderBy(table, ['points', 'goalDifference', 'goalsScored'], ['desc', 'desc', 'desc']);
 
-    return table;
+    tableStore.table = table;
   };
 
   _createTableEntry(team, games) {

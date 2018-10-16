@@ -72,6 +72,7 @@
 .table-container .table .row .col.col-header {
           font-size: 0.6em;
           text-transform: uppercase;
+          cursor: default;
         }
 
 .table-container .table .row .col.team-name {

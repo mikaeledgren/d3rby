@@ -1,8 +1,5 @@
-import {decorate, computed} from 'mobx'
+import {decorate, observable, computed} from 'mobx'
 import LogHelper from '../utils/LogHelper';
-import tableService from './Table.service';
-import gameStore from '../Game/Game.store';
-import teamStore from '../Team/Team.store';
 
 /*eslint-disable*/
 const {logName, debug, log, error} = LogHelper.get('TableStore', LogHelper.STORE_TYPE);
@@ -10,13 +7,16 @@ const {logName, debug, log, error} = LogHelper.get('TableStore', LogHelper.STORE
 
 class TableStore {
 
-  get table() {
-    return tableService.getTable(teamStore.teams, gameStore.playedGames);
-  };
+  table = [];
+
+  get leaderTeam(){
+    return this.table.length ? this.table[0].team : null;
+  }
 }
 
 decorate(TableStore, {
-  table: computed,
+  table: observable,
+  leaderTeam: computed,
 });
 
 const tableStore = new TableStore();

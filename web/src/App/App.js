@@ -1,20 +1,19 @@
 import React, {Component} from 'react';
 import './App.css';
+import appService from './App.service';
 import Games from "../Games/Games";
 import {observer} from 'mobx-react';
 import Table from "../Table/Table";
-import teamService from '../Team/Team.service';
-import gameService from '../Game/Game.service';
 import NextGame from "../NextGame/NextGame";
 import Loading from "../Loading/Loading";
 import gameStore from '../Game/Game.store';
 import Nothing from "../Nothing/Nothing";
+import TripDestination from "../TripDestination/TripDestination";
 
 class App extends Component {
 
   componentDidMount() {
-    teamService.load();
-    gameService.load();
+    appService.load();
   }
 
   render() {
@@ -32,6 +31,7 @@ class App extends Component {
               </div>
               :
               <div className="page-content">
+                <TripDestination/>
                 <Table/>
                 <NextGame/>
                 <Games/>

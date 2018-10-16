@@ -20,7 +20,12 @@ class GameStore {
   }
 
   get nextGame(){
-    return this.games.filter(game => !game.played)[0];
+    const gamesLeftToPlay = this.games.filter(game => !game.played);
+    return gamesLeftToPlay.length ? gamesLeftToPlay[0] : null;
+  }
+
+  get areAllGamesPlayed(){
+    return !this.nextGame;
   }
 }
 
@@ -30,6 +35,7 @@ decorate(GameStore, {
   setGames: action,
   isEmpty: computed,
   playedGames: computed,
+  areAllGamesPlayed: computed,
 });
 const gameStore = new GameStore();
 export default gameStore;

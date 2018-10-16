@@ -32,7 +32,9 @@ class NextGame extends Component {
             </Moment>
 
           </Game>
-        ) : null}
+        ) : (
+          <div className="next-game-none">Inga matcher kvar att spela!</div>
+        )}
       </div>
     );
   };

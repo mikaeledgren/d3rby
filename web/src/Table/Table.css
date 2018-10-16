@@ -8,7 +8,7 @@
           align-items: center;
 }
 
-@media (min-width: 668px) {
+@media (min-width: 768px) {
 
 .table-container {
     width: 470px;
@@ -16,7 +16,7 @@
 }
   }
 
-@media (max-width: 666px) {
+@media (max-width: 767px) {
 
 .table-container {
     width: 100%

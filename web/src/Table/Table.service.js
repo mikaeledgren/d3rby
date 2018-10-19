@@ -2,7 +2,7 @@ import teamStore from '../Team/Team.store';
 import gameService from '../Game/Game.service';
 import gameStore from '../Game/Game.store';
 import tableStore from './Table.store';
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import _ from 'lodash';
 
 /*eslint-disable*/
@@ -36,7 +36,7 @@ class TableService {
       points: 0,
     };
 
-    const teamGames = gameService.getTeamGames(team, games);
+    const teamGames = gameService.getGamesPlayedByTeam(team, games);
 
     teamGames.forEach(game => {
       const teamScore = game.homeTeam.code === team.code ? game.homeScore : game.awayScore;
@@ -47,7 +47,6 @@ class TableService {
       tableEntry.goalsScored += teamScore > opponentScore && game.penaltyShots ? teamScore - 1 : teamScore;
       tableEntry.goalsAgainst += teamScore < opponentScore && game.penaltyShots ? opponentScore - 1 : opponentScore;
       tableEntry.gamesPlayed += 1;
-
     });
 
     tableEntry.goalDifference = tableEntry.goalsScored - tableEntry.goalsAgainst;

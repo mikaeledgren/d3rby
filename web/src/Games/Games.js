@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import gameStore from '../Game/Game.store';
 import './Games.css';
 import Game from "../Game/Game";

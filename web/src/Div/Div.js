@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import './Div.css';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';

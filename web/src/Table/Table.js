@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import './Table.css';
 import tableStore from './Table.store';
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import Div from "../Div/Div";
 
 /*eslint-disable*/

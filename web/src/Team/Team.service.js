@@ -1,4 +1,4 @@
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import teamStore from './Team.store';
 
 /*eslint-disable*/
@@ -18,9 +18,9 @@ class TeamService {
       debug(...logName, `...got ${teams.length} teams!`);
 
       teamStore.teams = teams;
-
     } catch (e) {
       error(...logName, e);
+      throw e;
     }
   };
 }

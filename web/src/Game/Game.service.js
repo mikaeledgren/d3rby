@@ -1,4 +1,4 @@
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import gameStore from './Game.store';
 
 /*eslint-disable*/
@@ -23,11 +23,12 @@ class GameService {
 
     } catch (e) {
       error(...logName, e);
+      throw e;
     }
   };
 
-  getTeamGames = (team, games) => {
-    return games.filter(game => game.homeTeam.code === team.code || game.awayTeam.code === team.code);
+  getGamesPlayedByTeam = (team, games) => {
+    return games.filter(game => game.played && (game.homeTeam.code === team.code || game.awayTeam.code === team.code));
   }
 }
 

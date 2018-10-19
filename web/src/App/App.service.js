@@ -1,4 +1,4 @@
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 import teamService from '../Team/Team.service';
 import gameService from '../Game/Game.service';
 import tableService from '../Table/Table.service';

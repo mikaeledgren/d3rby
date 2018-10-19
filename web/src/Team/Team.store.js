@@ -1,5 +1,5 @@
 import {decorate, observable, action, computed} from 'mobx'
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 
 /*eslint-disable*/
 const {logName, debug, log, error} = LogHelper.get('TeamStore', LogHelper.STORE_TYPE);

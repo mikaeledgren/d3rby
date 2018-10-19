@@ -1,4 +1,4 @@
-import LogHelper from '../utils/LogHelper';
+import LogHelper from '../LogHelper/LogHelper';
 
 class Constants {
 
